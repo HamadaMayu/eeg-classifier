@@ -57,19 +57,19 @@ eeg-classifier/
 
 Directory description
 
-analysis/
+**analysis/**
 Scripts for EEG data visualization, feature analysis, and multimodality checks.
 
-model/
+**model/**
 Neural network architecture definitions including the EEG Conformer and Sub-center CosFace classifier.
 
-training/
+**training/**
 Training scripts for contrastive learning, linear probing, and final classifier training.
 
-inference/
+**inference/**
 Inference script for generating predictions and submission files.
 
-notebook/
+**notebook/**
 Experimental notebook used for the full pipeline.
 
 ## Model Architecture
