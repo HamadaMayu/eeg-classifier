@@ -43,26 +43,26 @@ The architecture is designed to capture both temporal EEG patterns and subject-s
 
 The model uses 17 EEG channels:
 
+```
 ['Pz','P3','P7','O1','Oz','O2','P4','P8','P1','P5','PO7','PO3','POz','PO4','PO8','P6','P2']
-
+```
 Channels in the occipital and parieto-occipital regions are given higher importance because they are more relevant for visual processing tasks.
 
 ## Installation
 
 Example dependencies:
-
+```
 pip install japanize-matplotlib
 pip install transformers
 pip install open_clip_torch timm
 pip install torch torchvision torchaudio
-pip install scikit-learn scipy tqdm pillow matplotlib numpy
-
+```
 The code is designed to run on Google Colab.
 
 ## Dataset Structure
 
 Expected directory structure:
-
+```
 EEG/
  ├── data/
  │   ├── train/
@@ -81,33 +81,35 @@ EEG/
  │       └── subject_idxs.npy
  ├── last_exam2.ipynb
  └── README.md
-Data Format
+```
 
-## EEG data
+## Data Format
 
+EEG data
+```
 shape: (N, C, T)
-
+```
 -N: number of samples
 -C: number of channels (17)
 -T: number of time steps
 
 Labels
-
+```
 shape: (N,)
-
+```
 Subject IDs
-
+```
 shape: (N,)
-
+```
 ## Image Feature Extraction
 
 Image embeddings are extracted using EVA-CLIP.
 
 Example:
-
+```
 train_feats, train_paths = extract_eva_clip_features(train_paths)
 val_feats, val_paths = extract_eva_clip_features(val_paths)
-
+```
 These features are used as supervision signals during contrastive learning.
 
 ## Contrastive Learning
@@ -117,9 +119,9 @@ EEG features and image features are aligned using an InfoNCE-style contrastive l
 The model learns a representation where corresponding EEG and image samples are close in embedding space.
 
 Output checkpoint:
-
+```
 best_contrastive.pt
-
+```
 ## Linear Probing
 
 After contrastive training, the backbone is frozen and a linear classifier is trained on top of the learned embeddings.
@@ -127,9 +129,9 @@ After contrastive training, the backbone is frozen and a linear classifier is tr
 This step evaluates the quality of the learned EEG representation.
 
 Output checkpoint:
-
+```
 best_linear_probe.pt
-
+```
 ## Final Classification
 
 The final classifier uses Sub-center CosFace to handle multimodal distributions within classes.
@@ -137,9 +139,9 @@ The final classifier uses Sub-center CosFace to handle multimodal distributions 
 Each class is represented by multiple centers in the embedding space, which improves robustness to subject variation.
 
 Output checkpoint:
-
+```
 best_subcosface_eeg2clip_K6.pt
-
+```
 ## Inference
 
 Test predictions are generated as logits.
@@ -165,7 +167,6 @@ Aggregates temporal EEG features using learned attention weights.
 Conformer Encoder
 
 Combines:
-
 -feed-forward layers
 -multi-head self-attention
 -convolution modules
@@ -188,16 +189,16 @@ Classification Training
 -EEG-to-CLIP projection optionally unfrozen
 -Sub-center CosFace classifier trained
 
-Outputs
+## Outputs
 
 Training produces:
-
+```
 best_contrastive.pt
 best_linear_probe.pt
 best_subcosface_eeg2clip_K6.pt
 submission.npy
 submission_last_exam2.zip
-
+```
 ## Notes
 
 -Designed for execution on Google Colab
@@ -206,7 +207,7 @@ submission_last_exam2.zip
 
 ## Future Work
 
--Possible extensions:
+Possible extensions:
 -stronger subject-invariant learning
 -EEG data augmentation
 -joint contrastive and classification training
