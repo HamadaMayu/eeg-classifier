@@ -10,6 +10,8 @@ __pycache__/
 *.npz
 
 data/
+*.npy
+*.pt
 
 submission.npy
 *.zip
