@@ -110,30 +110,19 @@ pip install scikit-learn scipy tqdm pillow matplotlib numpy
 ```
 The project is primarily designed to run on Google Colab.
 
-## Dataset Structure
+## Dataset
 
-The dataset is not included in this repository.
-
-Expected structure:
+The dataset used in this project is not included in this repository.
+The data was provided as part of a course assignment and cannot be redistributed publicly.
+To run the code, please place the dataset in the following structure:
 ```
 data/
 ├── train/
-│   ├── eeg.npy
-│   ├── labels.npy
-│   ├── subject_idxs.npy
-│   ├── image_paths.txt
-│   └── train_eva_feats.npy
-│
 ├── val/
-│   ├── eeg.npy
-│   ├── labels.npy
-│   ├── subject_idxs.npy
-│   └── val_eva_feats.npy
-│
 └── test/
-    ├── eeg.npy
-    └── subject_idxs.npy
 ```
+The dataset is not included in this repository.
+
 
 ## Data Format
 EEG data
