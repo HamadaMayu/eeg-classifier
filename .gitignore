@@ -1,19 +1,24 @@
+# Python cache
 __pycache__/
 *.pyc
 
+# Jupyter
 .ipynb_checkpoints/
 
+# model checkpoints
 *.pt
 *.pth
 
+# numpy data
 *.npy
 *.npz
 
+# datasets
 data/
-*.npy
-*.pt
 
+# outputs
 submission.npy
 *.zip
 
+# macOS
 .DS_Store
