@@ -257,11 +257,8 @@ submission_last_exam2.zip
 - Dataset is not included in this repository
 
 ## Future Work
-
-- Possible extensions:
+Possible extensions:
 - stronger subject-invariant learning
 - EEG data augmentation
-
-joint contrastive and classification training
-
-improved temporal feature selection
+- joint contrastive and classification training
+- improved temporal feature selection
