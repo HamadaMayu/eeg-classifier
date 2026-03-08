@@ -113,7 +113,7 @@ The project is primarily designed to run on Google Colab.
 ## Dataset
 
 The dataset used in this project is not included in this repository.
-The data was provided as part of a course assignment and cannot be redistributed publicly.
+The dataset cannot be redistributed due to licensing restrictions.
 To run the code, please place the dataset in the following structure:
 ```
 data/
