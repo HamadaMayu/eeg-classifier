@@ -112,16 +112,18 @@ The project is primarily designed to run on Google Colab.
 
 ## Dataset
 
-The dataset used in this project is not included in this repository.
+## Dataset
+
+The dataset used in this project is not included in this repository.  
 The dataset cannot be redistributed due to licensing restrictions.
-To run the code, please place the dataset in the following structure:
+
+If you want to run the code with your own dataset, please preprocess your data into the following format:
 ```
 data/
 ├── train/
 ├── val/
 └── test/
 ```
-
 
 ## Data Format
 EEG data
@@ -140,6 +142,11 @@ Subject IDs
 ```
 shape: (N,)
 ```
+Example:
+
+train_eeg.npy
+train_labels.npy
+train_subject_idxs.npy
 
 ## Image Feature Extraction
 
