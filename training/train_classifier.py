@@ -15,7 +15,7 @@ from model.subcenter_cosface import SubCenterCosFace, EEGConformer_SubCosFace
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 WORK_DIR = os.environ.get("WORK_DIR", ".")
-CKPT_PATH = os.environ.get("CKPT_PATH", "best_contrastive.pt")
+CKPT_PATH = os.environ.get("CKPT_PATH", "contrastive.pt")
 
 
 class ThingsEEGDatasetCls(Dataset):
