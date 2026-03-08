@@ -154,8 +154,8 @@ def main():
         print(f"[Epoch {epoch:02d}] train_loss={tr_loss:.4f} train_acc={tr_acc:.4f} | val_loss={va_loss:.4f} val_acc={va_acc:.4f}")
         if va_acc > best_val_acc:
             best_val_acc = va_acc
-            torch.save({"probe": probe.state_dict()}, "best_linear_probe.pt")
-            print("saved best_linear_probe.pt")
+            torch.save({"probe": probe.state_dict()}, "linear_probe.pt")
+            print("saved linear_probe.pt")
 
 
 if __name__ == "__main__":
