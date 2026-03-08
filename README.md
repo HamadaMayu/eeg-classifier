@@ -169,7 +169,7 @@ The model learns a representation where corresponding EEG and image samples are 
 
 Output checkpoint:
 ```
-best_contrastive.pt
+contrastive.pt
 ```
 ## Linear Probing
 
@@ -179,7 +179,7 @@ This step evaluates the quality of the learned EEG representation.
 
 Output checkpoint:
 ```
-best_linear_probe.pt
+linear_probe.pt
 ```
 ## Final Classification
 
@@ -191,7 +191,7 @@ Each class is represented by multiple centers in the embedding space, improving 
 
 Output checkpoint:
 ```
-best_subcosface_eeg2clip_K6.pt
+subcosface.pt
 ```
 
 ## Inference
@@ -240,11 +240,11 @@ Extends CosFace by assigning multiple centers per class, allowing better modelin
 
 Training produces:
 ```
-best_contrastive.pt
-best_linear_probe.pt
-best_subcosface_eeg2clip_K6.pt
+contrastive.pt
+linear_probe.pt
+subcosface.pt
 submission.npy
-submission_last_exam2.zip
+submission.zip
 ```
 
 ## Notes
