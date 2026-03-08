@@ -150,8 +150,8 @@ def main():
         print(f"[Epoch {epoch:02d}] train_loss={train_loss:.4f} val_loss={val_loss:.4f}")
         if val_loss < best_val:
             best_val = val_loss
-            torch.save({"model": model.state_dict()}, "best_contrastive.pt")
-            print("saved best_contrastive.pt")
+            torch.save({"model": model.state_dict()}, "contrastive.pt")
+            print("saved contrastive.pt")
 
 
 if __name__ == "__main__":
