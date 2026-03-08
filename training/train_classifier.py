@@ -135,7 +135,7 @@ def main():
 
     scheduler = optim.lr_scheduler.LambdaLR(optimizer, lr_lambda)
     best_val_acc = 0.0
-    save_path = "best_subcosface_eeg2clip_K6.pt"
+    save_path = "subcosface.pt"
 
     for epoch in range(1, num_epochs + 1):
         tr_loss, tr_acc = train_epoch(model, train_loader, optimizer, scheduler=scheduler, grad_clip=1.0)
