@@ -48,8 +48,6 @@ eeg-classifier/
 ├── inference/
 │   └── predict.py
 │
-├── notebook/
-│   └── eeg_pipeline.ipynb
 │
 ├── README.md
 └── LICENSE
