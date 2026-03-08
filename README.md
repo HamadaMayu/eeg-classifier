@@ -110,7 +110,6 @@ pip install scikit-learn scipy tqdm pillow matplotlib numpy
 ```
 The project is primarily designed to run on Google Colab.
 
-## Dataset
 
 ## Dataset
 
