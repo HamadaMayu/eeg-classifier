@@ -141,10 +141,13 @@ Subject IDs
 ```
 shape: (N,)
 ```
+
 Example:
 
 train_eeg.npy
+
 train_labels.npy
+
 train_subject_idxs.npy
 
 ## Image Feature Extraction
