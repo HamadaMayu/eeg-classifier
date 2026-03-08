@@ -1,4 +1,4 @@
-# eeg-classifier
+# EEG-classifier
 
 ## EEG Classification with Contrastive Learning and Sub-center CosFace
 
