@@ -121,7 +121,6 @@ data/
 ├── val/
 └── test/
 ```
-The dataset is not included in this repository.
 
 
 ## Data Format
